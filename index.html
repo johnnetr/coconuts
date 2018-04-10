@@ -51,15 +51,17 @@
 
 <!-- Add Pixel Events to the button's click handler -->
 <script type="text/javascript">
-  var button = document.getElementById('addToCartButton');
+  var button = document.getElementById('ClickEvent');
   button.addEventListener(
     'click', 
     function() { 
-      fbq('track', 'AddToCart');          
+      fbq('track', 'ClickEvent');          
     },
     false
   );
 </script>
+
+
 
   </head>
 
@@ -256,7 +258,7 @@
               <input type="radio" value="Nam" name="MMERGE2"><label for="mce-MMERGE2-0">Nam &ensp;</label></li>
               <input type="radio" value="Nữ" name="MMERGE2"><label for="mce-MMERGE2-1">Nữ</label></li>
             </div>
-              <button id="addToCartButton" type="submit" class="btn btn-danger">Đăng Ký</button>
+              <button id="ClickEvent" type="submit" class="btn btn-danger">Đăng Ký</button>
             </form>
         </div>
       <hr>
