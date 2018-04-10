@@ -49,11 +49,17 @@
     fbq('track', 'ViewContent');
   </script>
 
-<script>
-  function onClick() {
-  fbq('track', 'Purchase');
-  };
-  </script>
+<!-- Add Pixel Events to the button's click handler -->
+<script type="text/javascript">
+  var button = document.getElementById('addToCartButton');
+  button.addEventListener(
+    'click', 
+    function() { 
+      fbq('track', 'AddToCart');          
+    },
+    false
+  );
+</script>
 
   </head>
 
@@ -250,7 +256,7 @@
               <input type="radio" value="Nam" name="MMERGE2"><label for="mce-MMERGE2-0">Nam &ensp;</label></li>
               <input type="radio" value="Nữ" name="MMERGE2"><label for="mce-MMERGE2-1">Nữ</label></li>
             </div>
-              <button onClick="onClick()" type="submit" class="btn btn-danger">Đăng Ký</button>
+              <button id="addToCartButton" type="submit" class="btn btn-danger">Đăng Ký</button>
             </form>
         </div>
       <hr>
